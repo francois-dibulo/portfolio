@@ -130,10 +130,13 @@ a.linked-in {
 */
 
 .profile-picture {
-  width: 10vw;
-  height: 10vw;
+  width: 25vw;
+  height: 25vw;
   min-height: 220px;
   min-width: 220px;
+  max-height: 400px;
+  max-width: 400px;
+  max-width: ;
   background-size: cover;
   background-position: center;
   background-image: url("../assets/me.jpg");
