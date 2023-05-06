@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Francois Weber - Software Engineer</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="Personal website of Francois Weber">
+  <meta name="description" content="Personal website of François Weber - founding member of AirConsole and founder of Dibulo">
+  <title>Francois Weber - Software Engineer</title>
   <!-- <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.9.0/css/all.css', crossorigin='anonymous' /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="styles/grid.css" />
-  <link rel="stylesheet" type="text/css" href="styles/app.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="styles/app.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="styles/build.css" />
 </head>
-<body>
+<body class="h-full">
 
-  <div class="col-min-85 row-v j-center white-links bg-blue color-white" id="about-me">
-    <div class="col-100">
-      <div class="container">
-        <div class="row j-center">
-          <div class="profile-picture"></div>
-        </div>
-        <div class="space-lg"></div>
-        <h1 class="text-center">
-          Francois Weber
-          <div class="subtitle">
-            Entrepreneur & Software Engineer<br>
-            Founder of <a href="https://www.dibulo.com/" target="_blank" style="color:#FFFFFF;">Dibulo</a><br>
-            Founding member of <a href="https://www.airconsole.com/" target="_blank" style="color:#FFFFFF;">AirConsole</a><br>
-            Digital Nomad
-          </div>
-        </h1>
-        </div>
+<div class="flex flex-col w-full min-100-vh m-auto">
+
+  <div class="flex flex-col md:flex-row md:flex-row-reverse w-10/12 m-auto">
+
+    <div class="w-full mt-8 md:mt-0 md:w-2/4 flex flex-col justify-center items-center">
+      <img
+          class="rounded-full drop-shadow-lg border-8 border-neutral-800"
+          src="assets/me2.webp"
+          alt="Francois Weber">
+    </div>
+
+    <div class="w-full mt-8 md:mt-0 md:w-2/4 flex flex-col justify-center">
+      <h1 class="font-bold text-3xl md:text-8xl">
+        Hi, I am François!
+      </h1>
+      <div class="text-2xl md:text-5xl mt-8">
+        Software Engineer, explorer and currently building my own startup <a href="https://www.dibulo.com" target="_blank" class="underline">Dibulo</a>.
+      </div>
+      <div class="text-2xl md:text-3xl mt-8">
+        <a href="mailto:hellohoo@airfrancois.com">hellohoo@airfrancois.com</a>
       </div>
     </div>
+
   </div>
 
-  <div class="col-min-15 row-v j-center text-center">
-    <div class="space-lg"></div>
-    <div>
-      <a href="mailto:hellohoo@airfrancois.com">hellohoo@airfrancois.com</a>
+</div>
+
+<div class="hidden flex flex-row w-full min-100-vh m-auto bg-green">
+  <div class="flex flex-col w-10/12 m-auto">
+    <h2>Things I have built</h2>
+  </div>
+
+  <div class="flex flex-row w-10/12 m-auto">
+  </div>
+</div>
+
+
+<div class="hidden col-min-85 row-v j-center white-links bg-blue color-white" id="about-me">
+  <div class="col-100">
+    <div class="container">
+      <div class="row j-center">
+        <div class="profile-picture"></div>
+      </div>
+      <div class="space-lg"></div>
+      <h1 class="text-center">
+        Francois Weber
+        <div class="subtitle">
+          Entrepreneur & Software Engineer<br>
+          Founder of <a href="https://www.dibulo.com/" target="_blank" style="color:#FFFFFF;">Dibulo</a><br>
+          Founding member of <a href="https://www.airconsole.com/" target="_blank" style="color:#FFFFFF;">AirConsole</a><br>
+          Digital Nomad
+        </div>
+      </h1>
     </div>
-    <div class="space-lg"></div>
-    I wish I had time to work on this website, <br> but I am busy with working on my new startup <a href="https://www.dibulo.com/" target="_blank">Dibulo</a>
   </div>
+</div>
+</div>
 
-  <div class="space-lg"></div>
 </body>
 </html>
