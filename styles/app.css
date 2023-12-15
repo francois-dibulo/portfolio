@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .card {
+    @apply bg-contain w-full h-full bg-center bg-no-repeat m-auto overflow-hidden rounded-lg;
+  }
+}
+
 html, body {
   min-height: 100%;
 }
@@ -15,6 +21,10 @@ body {
 
 .min-100-vh {
   min-height: 100vh;
+}
+
+.min-90-vh {
+  min-height: 90vh;
 }
 
 /*
@@ -66,4 +76,11 @@ body {
 
 .color-dark-blue {
   color: #00121b;
+}
+
+.card {
+  width: 25vmin;
+  height: 25vmin;
+  max-width: 512px;
+  background-size: 100%;
 }
