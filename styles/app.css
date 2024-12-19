@@ -62,6 +62,11 @@ body {
   background: #F6F6F6;
 }
 
+.bg-dotted-yellow {
+  background-color: #fbbc04;
+  background-image: url(../assets/dot-y.png);
+}
+
 .color-white {
   color: #FFFFFF;
 }
