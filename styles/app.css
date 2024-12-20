@@ -4,7 +4,7 @@
 
 @layer components {
   .card {
-    @apply bg-contain w-full h-full bg-center bg-no-repeat m-auto overflow-hidden rounded-lg;
+    @apply bg-contain w-full h-full bg-center bg-no-repeat overflow-hidden rounded-lg;
   }
 }
 
