@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -8,16 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="styles/build.css" />
 </head>
 <body class="h-full">
+
 <main>
 
-  <section class="flex flex-col w-full min-90-vh bg-dotted-yellow justify-end items-center">
-    <div class="flex flex-col md:flex-row justify-center items-center w-10/12 h-full lg:min-90-vh">
+  <section class="flex flex-col w-full min-90-vh justify-center items-center">
+    <div class="flex flex-col md:flex-row justify-center items-center w-[80%] h-full lg:min-90-vh lg:space-x-10">
 
-      <div class="w-full md:w-2/4 flex flex-col justify-center lg:min-90-vh">
-        <h1 class="font-bold text-3xl xl:text-6xl">
+      <div class="w-full md:w-2/4 flex flex-col justify-center items-center lg:min-90-vh">
+        <img
+            class="max-w-[300px] md:max-w-[400px] lg:max-w-[600px] md:w-[33vw]"
+            src="assets/intro.webp"
+            alt="François Weber">
+      </div>
+
+      <div class="w-full md:w-2/4 flex flex-col justify-center lg:min-90-vh text-center md:text-left">
+        <h1 class="text-4xl xl:text-6xl text-accent font-nunito font-extrabold mt-8 lg:mt-0">
           Hi, I am François!
         </h1>
         <div class="text-2xl mt-8 lg:text-4xl 2xl:text-5xl">
@@ -29,64 +39,81 @@
         </div>
       </div>
 
-      <div class="mt-8 w-full md:w-2/4 flex flex-col justify-end items-center lg:items-end lg:min-90-vh">
-        <img
-            class="max-w-[200px] lg:max-w-[400px]"
-            src="assets/francois-nobg.png"
-            alt="François Weber">
-      </div>
-
     </div>
 
   </section>
 
-  <section class="bg-black py-20 flex flex-col w-full m-auto">
+  <section class="py-20 flex flex-col w-full m-auto bg-neutral-100">
     <h2
-      class="text-2xl font-bold text-center text-white lg:text-4xl">
+      class="text-2xl text-center lg:text-4xl font-nunito font-extrabold">
         Things I have worked on:
     </h2>
 
-    <h3 class="text-white font-bold text-center mt-10 text-xl lg:text-3xl mb-4">
+    <h3 class="font-bold text-center mt-8 text-xl lg:text-3xl mb-4 text-accent">
       Career:
     </h3>
 
-    <div class="w-11/12 lg:w-3/5 m-auto flex flex-row flex-wrap justify-center gap-2 text-white">
+    <div class="w-11/12 m-auto flex flex-row flex-wrap justify-center gap-2 grid-cols-1 lg:grid-cols-3">
+
       <a
-        href="https://upit.com/"
-        title="UpIt"
-        target="_blank"
-        class="card bg-white relative"
-        style="background-image: url('assets/logos/upit.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm px-1 text-center">
-          Build games with gen AI
+        href="https://upit.com/" target="_blank" class="card bg-base-100 shadow-sm">
+        <figure>
+          <img
+            class="w-96"
+            src="assets/logos/upit.png"
+            alt="Upit.com" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">UpIt</h2>
+          <p class="text-base">Build games with gen AI</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-neutral">Visit</button>
+          </div>
         </div>
       </a>
+     
       <a
-          href="https://www.dibulo.com/"
-          title="Bring your drawings to life!"
-          target="_blank"
-          class="card bg-white relative"
-          style="background-image: url('assets/logos/dibulo.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm px-1 text-center">
-          Interactive coloring experience 
+        href="https://www.dibulo.com/" target="_blank" class="card bg-base-100 shadow-sm">
+        <figure>
+          <img
+            class="w-96"
+            src="assets/logos/dibulo.png"
+            alt="Upit.com" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Dibulo</h2>
+          <p class="text-base">Interactive coloring experience for kids</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-neutral">Visit</button>
+          </div>
         </div>
       </a>
+
       <a
-          href="https://www.airconsole.com/"
-          title="AirConsole"
-          target="_blank"
-          class="card bg-white relative"
-          style="background-image: url('assets/logos/airconsole.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center px-1">
-          Turn your phone into a gamepad
+        href="https://www.airconsole.com/" target="_blank" class="card bg-base-100 shadow-sm">
+        <figure>
+          <img
+            class="w-96"
+            src="assets/logos/airconsole.png"
+            alt="Upit.com" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">AirConsole</h2>
+          <p class="text-base">Multiplayer game platform</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-neutral">Visit</button>
+          </div>
         </div>
       </a>
+
     </div>
 
-    <h3 class="text-white font-bold text-center mt-10 text-xl lg:text-3xl mb-4">
+    <div class="w-11/12 m-auto flex flex-row flex-wrap justify-center gap-2 grid-cols-1 lg:grid-cols-3 mt-8">
+      <a
+        href="https://www.linkedin.com/in/fcweber/" target="_blank" class="btn btn-primary">More on Linked-In</a>
+    </div>
+
+    <!-- <h3 class="text-white font-bold text-center mt-10 text-xl lg:text-3xl mb-4">
       Projects:
     </h3>
     
@@ -184,9 +211,12 @@
         <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
           Bomb your friends
         </div>
-      </a>
+      </a> -->
 
     </div>
+
+
+
   </section>
 
   <section 
@@ -333,7 +363,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setYtVideoSrc("https://www.youtube.com/embed/11j92wa6DPY?si=FlXVZ4igJihptaaR");
+          setYtVideoSrc("https://www.youtube.com/embed/qckBI1BkrCY?si=KwZbSxrEyYWFUJXT");
         }
       });
     }, {
