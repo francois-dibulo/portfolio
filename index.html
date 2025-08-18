@@ -19,19 +19,29 @@
   <section class="flex flex-col w-full min-90-vh justify-center items-center">
     <div class="flex flex-col md:flex-row justify-center items-center w-[80%] h-full lg:min-90-vh lg:space-x-10">
 
-      <div class="w-full md:w-2/4 flex flex-col justify-center items-center lg:min-90-vh">
+      <div class="w-full md:w-2/4 flex flex-col justify-center items-center lg:min-90-vh mt-10 md:mt-0">
         <img
             class="max-w-[300px] md:max-w-[400px] lg:max-w-[600px] md:w-[33vw]"
             src="assets/intro.webp"
             alt="François Weber">
       </div>
 
-      <div class="w-full md:w-2/4 flex flex-col justify-center lg:min-90-vh text-center md:text-left">
-        <h1 class="text-4xl xl:text-6xl text-accent font-nunito font-extrabold mt-8 lg:mt-0">
+      <div class="w-full md:w-2/4 flex flex-col justify-center lg:min-90-vh text-left">
+        <h1 class="text-4xl xl:text-6xl text-accent font-nunito font-extrabold mt-6 lg:mt-0">
           Hi, I am François!
         </h1>
-        <div class="text-2xl mt-8 lg:text-4xl 2xl:text-5xl">
-          I build innovative platforms, interactive worlds and tell stories with gen AI.
+        <div class="text-lg mt-6">
+          I got my first computer at the age of 14, basically when the browser wars started and when visitor 
+          counters and guestbooks were a thing. With internet access, I was amazed by the potential that you 
+          could reach millions of users - you only needed the coding skills and a good idea, right?
+          <br />
+          Fast forward a few startups later and I learned it’s not just the idea. Execution, timing and product–market fit matter just as much. I’m a software engineer and founder at heart, with over a decade of experience building products and helping early-stage companies grow. I love turning ideas into things people can use.
+          <br />
+          <br />
+          These days, I balance work with traveling, spending time with my cute dog and 
+          <a href="https://franzeus.medium.com/" target="_blank" class="text-accent underline"> occasionally I write</a>
+          or <a href="https://www.youtube.com/channel/UCJvSxu2KCWQ4n7tzJFDgaQg" target="_blank" class="text-accent underline">
+            I make videos with gen AI</a>.
         </div>
         <hr class="mt-8" />
         <div class="text-2xl md:text-3xl mt-8">
@@ -43,282 +53,51 @@
 
   </section>
 
-  <section class="py-20 flex flex-col w-full m-auto bg-neutral-100">
+  <section title="Projects" class="py-20 flex flex-col w-full m-auto bg-neutral-100">
     <h2
       class="text-2xl text-center lg:text-4xl font-nunito font-extrabold">
         Things I have worked on:
     </h2>
 
-    <h3 class="font-bold text-center mt-8 text-xl lg:text-3xl mb-4 text-accent">
-      Career:
-    </h3>
-
-    <div class="w-11/12 lg:w-5xl m-auto flex flex-row flex-wrap justify-center grid grid-cols-1 lg:grid-cols-3 gap-2">
-
-      <div class="card bg-base-100 shadow-sm">
-        <figure>
-          <img
-            class="w-96"
-            src="assets/logos/upit.png"
-            alt="Upit.com" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title font-nunito text-2xl">UpIt</h2>
-          <div class="badge badge-accent badge-sm">Early Stage Engineer</div>
-          <p class="text-base">UpIt is a platform that allows anyone to build games with gen AI</p>
-          <div class="card-actions justify-end">
-            <a href="https://www.upit.com/" target="_blank" class="btn btn-neutral">Visit</a>
-          </div>
-        </div>
+    <div class="columns-2 lg:columns-4 gap-4 space-y-4 mt-10 mx-4 md:mx-10">
+      <a href="https://dibulo.com" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/dibulo.webp" loading="lazy" class="rounded-xl" alt="Dibulo"/>
+      </a>
+      <a href="https://invaders-must-die.com" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/invaders-must-die.webp" loading="lazy" class="rounded-xl" alt="Invaders Must Die"/>
+      </a>
+      <a href="https://airconsole.com" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/airconsole.webp" loading="lazy" class="rounded-xl" alt="AirConsole"/>
+      </a>
+      <a href="https://upit.com" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/upit.webp" loading="lazy" class="rounded-xl" alt="Upit.com"/>
+      </a>
+      <a href="https://www.airconsole.com/play/card-games/hang-in-there" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/airconsole-hanginthere.webp" loading="lazy" class="rounded-xl" alt="Hang In There"/>
+      </a>
+      <a href="https://www.airconsole.com/play/card-games/pinworld" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/airconsole-pinworld.webp" loading="lazy" class="rounded-xl" alt="Pinworld"/>
+      </a>
+      <a href="https://www.airconsole.com/play/card-games/friendsquiz" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/airconsole-friendsquiz.webp" loading="lazy" class="rounded-xl" alt="Friendsquiz on AirConsole"/>
+      </a>
+      <div class="card shadow-lg">
+        <img src="/assets/projects/beehave.webp" loading="lazy" class="rounded-xl" alt="Beehave"/>
       </div>
-     
-      <div class="card bg-base-100 shadow-sm">
-        <figure>
-          <img
-            class="w-96"
-            src="assets/logos/dibulo.png"
-            alt="Upit.com" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title font-nunito text-2xl">Dibulo</h2>
-          <div class="badge badge-accent badge-sm">Founder</div>
-          <p class="text-base">An interactive coloring experience for kids - bring your drawings to life</p>
-          <div class="card-actions justify-end">
-            <a href="https://www.dibulo.com/" target="_blank" class="btn btn-neutral">Visit</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card bg-base-100 shadow-sm">
-        <figure>
-          <img
-            class="w-96"
-            src="assets/logos/airconsole.png"
-            alt="Upit.com" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title font-nunito text-2xl">AirConsole</h2>
-          <div class="badge badge-accent badge-sm">Founding Engineer</div>
-          <p class="text-base">Local multiplayer gaming platform - use your phone as a controller</p>
-          <div class="card-actions justify-end">
-            <a href="https://www.airconsole.com/" target="_blank" class="btn btn-neutral">Visit</a>
-          </div>
-        </div>
-      </div>
-
+      <a href="https://dibulo.com/train" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/dibulo-express.webp" loading="lazy" class="rounded-xl" alt="Dibulo Express"/>
+      </a>
+      <a href="https://dibulo.com/frutball" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/dibulo-frutball.webp" loading="lazy" class="rounded-xl" alt="Dibulo Frutball"/>
+      </a>
+      <a href="https://dibulo.com/sealand" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/dibulo-sealand.webp" loading="lazy" class="rounded-xl" alt="Dibulo Sealand"/>
+      </a>
+      <a href="https://www.airconsole.com/play/battle-games/tic-tac-boom" target="_blank" class="card shadow-lg">
+        <img src="/assets/projects/airconsole-tictacboom.webp" loading="lazy" class="rounded-xl" alt="Tic Tac Boom AirConsole"/>
+      </a>
     </div>
-
-    <div class="w-11/12 m-auto flex flex-row flex-wrap justify-center gap-2 grid-cols-1 lg:grid-cols-3 mt-8">
-      <a
-        href="https://www.linkedin.com/in/fcweber/" target="_blank" class="btn btn-primary">More on Linked-In</a>
-    </div>
-
-    <!-- <h3 class="text-white font-bold text-center mt-10 text-xl lg:text-3xl mb-4">
-      Projects:
-    </h3>
-    
-    <div class="w-11/12 lg:w-3/5 m-auto flex flex-row flex-wrap justify-center gap-2 text-white">
-      <a
-        href="https://invaders-must-die.com/"
-        title="Fast paced action game!"
-        target="_blank"
-        class="card bg-white relative"
-        style="background-image: url('assets/logos/invaders-must-die.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Fast paced 2-finger action game
-        </div>
-      </a>
-      <a
-          href="https://play.google.com/store/apps/details?id=com.zeus.goodme"
-          target="_blank"
-          title="Fight your habits"
-          class="card bg-white relative"
-          style="background-image: url('assets/logos/beehave.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Track your habits
-        </div>
-      </a>
-
-      <a
-          href="https://francois-dibulo.github.io/nexteli/"
-          target="_blank"
-          title="Nexteli"
-          class="card bg-white relative"
-          style="background-image: url('assets/logos/nexteli.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Find your next commute
-        </div>
-      </a>
-
-      <a
-          href="https://pendlehero.web.app/"
-          target="_blank"
-          title="Pendelhero"
-          class="card relative"
-          style="background-image: url('assets/logos/pendelhero.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Find the best common address
-        </div>
-      </a>
-
-      <a
-          href="https://www.airconsole.com/play/card-games/fartwork"
-          target="_blank"
-          title="fArtwork"
-          class="card relative"
-          style="background-image: url('assets/work/fartwork.jpeg')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Draw with your friends    
-        </div>
-      </a>
-
-      <a
-          href="https://www.airconsole.com/play/card-games/friendsquiz"
-          target="_blank"
-          title="FriendsQuiz"
-          class="card relative"
-          style="background-image: url('assets/work/friendsquiz.jpg')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Quiz your friends         
-        </div>
-      </a>
-
-      <a
-          href="https://www.airconsole.com/play/card-games/pinworld"
-          target="_blank"
-          title="PinWorld"
-          class="card relative"
-          style="background-image: url('assets/work/pinworld.png')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          City guessing game
-        </div>
-      </a>
-
-      <a
-          href="https://www.airconsole.com/play/battle-games/tic-tac-boom"
-          target="_blank"
-          title="Tic Tac Boom"
-          class="card relative"
-          style="background-image: url('assets/work/tictacboom.jpg')"
-      >
-        <div class="hidden lg:block absolute left-0 right-0 bottom-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-sm text-center">
-          Bomb your friends
-        </div>
-      </a> -->
-
-    </div>
-
-
-
   </section>
-
-  <section 
-    class="py-20 flex flex-col w-full m-auto min-90-vh bg-green-500 bg-no-repeat bg-cover"
-    style="background-image: url(assets/life/screenshot-sealand.jpg);">
-
-    <img src="assets/life/dibulo-logo.png" class="w-64 m-auto mb-8" loading="lazy" alt="dibulo">
-
-    <div class="w-11/12 lg:w-2/4 m-auto bg-white p-4 rounded-lg">
-      
-      <h2
-        class="text-2xl font-bold text-center mb-6 lg:text-2xl">  
-        I am the founder of dibulo <br>- an interactive coloring experience for kids
-      </h2>
-
-      <div class="grid grid-cols-2 gap-2">
-        <img src="assets/life/52833561297_4fd2ea8114_k.jpg" loading="lazy" alt="François presenting dibulo on stage">
-        <img src="assets/life/52747633353_cf90fa7aa0_k.jpg" loading="lazy" alt="François at the Madeira accelerator program">
-      </div>
-
-      <div class="my-6">
-        Dibulo started as a prototype for an interactive coloring experience designed for kids, blending creativity and technology. 
-        To develop the idea further, I joined an accelerator program in Madeira, where I refined the product. To this day there are different coloring worlds for kids to explore. 
-        Dibulo's ease of setup and use — requiring no additional hardware — made it especially appealing to parents, teachers, and kindergartens. 
-        Its unique approach to engaging young minds helped it gain traction, ultimately achieving bestseller status on Amazon.nl and
-         becoming a beloved tool in early childhood education.
-      </div>
-
-
-      <img src="assets/life/dibulo-gallery.jpg" loading="lazy" alt="Dibulo gallery">
-
-    </div>
-
-  </section>
-
-  <section class="py-20 flex flex-col w-full m-auto">
-    <h2
-        class="text-3xl font-bold text-center mb-8 lg:text-4xl">
-      Sometimes I write:
-    </h2>
-
-    <div class="w-11/12 lg:w-2/4 m-auto">
-      <a
-        href="https://franzeus.medium.com/understanding-google-cloud-iaas-and-paas-offerings-when-to-use-what-4b8f2942d5af"
-        target="_blank" 
-        class="flex flex-row items-center mb-10">
-        <img src="https://miro.medium.com/v2/resize:fill:160:107/1*lAHhkm-Epyw5pHum6GEnQA.jpeg" 
-          loading="lazy"
-          class="mr-3 lg:mr-6 rounded-lg"
-          alt="">
-        <h3 class="font-bold text-lg lg:text-2xl">
-          Understanding Google Cloud IaaS and PaaS Offerings — when to use what
-        </h3>
-      </a>
-
-      <a
-        href="https://franzeus.medium.com/how-i-made-an-epic-video-story-for-my-futuristic-game-with-gen-ai-8ff68c78b32e"
-        target="_blank" 
-        class="flex flex-row items-center mb-10">
-        <img src="https://miro.medium.com/v2/resize:fill:160:107/1*yC13CXSXMaQ-dAHEZHioAg.jpeg"
-          loading="lazy"
-          class="mr-3 lg:mr-6 rounded-lg"
-          alt="">
-        <h3 class="font-bold text-lg lg:text-2xl">
-          How I made an epic video story for my futuristic game with gen AI
-        </h3>
-      </a>
-      
-      <a
-        href="https://franzeus.medium.com/building-an-interactive-coloring-world-with-swiss-trains-and-my-4-year-old-nephew-67d6e45381d7"
-        target="_blank" 
-        class="flex flex-row items-center mb-10">
-        <img src="https://miro.medium.com/v2/resize:fill:160:107/1*0hqR0kZEkA4cw0pVoZDu_g.png" 
-          loading="lazy"
-          class="mr-3 lg:mr-6 rounded-lg"
-          alt="">
-        <h3 class="font-bold text-lg lg:text-2xl">
-          Building an interactive coloring world with Swiss trains and my 4 year old nephew 🎨🇨🇭🚂
-        </h3>
-      </a>
-
-      <a
-        href="https://franzeus.medium.com/record-audio-in-js-and-upload-as-wav-or-mp3-file-to-your-backend-1a2f35dea7e8"
-        target="_blank" 
-        class="flex flex-row items-center mb-10">
-        <img src="https://miro.medium.com/v2/resize:fill:160:107/1*SZuH30noatm4VUKgNxYrRA.png" 
-          loading="lazy"
-          class="mr-3 lg:mr-6 rounded-lg"
-          alt="">
-        <h3 class="font-bold text-lg lg:text-2xl">
-          Record Audio in JS and upload as wav or mp3 file to your backend
-        </h3>
-      </a>
-      
-      <a
-        class="mt-10 block text-center border-2 border-neutral-400 p-4 rounded-2xl" 
-        href="https://franzeus.medium.com/" 
-        target="_blank">See all posts</a>
-    </div>
-
-  </section>
-
 
   <section id="video-section" class="py-20 flex flex-col w-full m-auto bg-black">
     <h2
@@ -363,7 +142,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setYtVideoSrc("https://www.youtube.com/embed/qckBI1BkrCY?si=KwZbSxrEyYWFUJXT");
+          setYtVideoSrc("https://www.youtube.com/embed/mQkUYhUog1g?si=sKvAeF9g7Nx_c_ar");
         }
       });
     }, {
