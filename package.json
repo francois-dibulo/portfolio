@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "npx @tailwindcss/cli -i styles/app.css -o styles/build.css",
-    "dev": "npx tailwindcss -i styles/app.css -o styles/build.css --watch"
+    "dev": "npx @tailwindcss/cli -i styles/app.css -o styles/build.css --watch"
   },
   "devDependencies": {
     "daisyui": "5.0.2",
