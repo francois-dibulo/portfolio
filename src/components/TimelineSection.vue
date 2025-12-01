@@ -124,11 +124,6 @@ const timelineItems = [
     description: 'So far I have mostly worked for early-stage startups and have been part of the journey of many companies. It fits me as I am a curious person and love to learn new things when wearing many hats.'
   },
   {
-    time: 'Fun fact',
-    title: 'Relocations',
-    description: 'I have relocated over 35 times in my life. Mostly within the same cities, but also to other countries. That may explain why I don\'t own a lot of stuff or that I may not necessarily need a gym subscription.'
-  },
-  {
     time: '2015',
     title: 'AirConsole - Zurich 🇨🇭',
     image: '/assets/timeline/airconsole.webp',
@@ -158,7 +153,7 @@ const timelineItems = [
   },
   {
     time: '2023',
-    title: 'Dibulo',
+    title: 'Dibulo - Founder',
     image: '/assets/timeline/dibulo.webp',
     imageAlt: 'Dibulo',
     description: 'Wearing many hats, helped me to found my own company. In 2023 I went to a 6-week accelerator in Madeira to validate an idea: Dibulo - an interactive coloring session for kids. We launched shortly after and our coloring books became best-sellers on Amazon.nl.'

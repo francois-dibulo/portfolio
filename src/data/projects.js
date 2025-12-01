@@ -3,7 +3,7 @@ export const projects = [
     name: 'CloudTutor.app',
     role: 'Founder',
     year: 2025,
-    url: 'https://cloudtutor.app',
+    url: 'https://cloudstacktutor.web.app/',
     shortDescription: 'A hands-on simulator for mastering Google Cloud architectures.',
     description: 'I have spent over a decade building production systems on Google Cloud, mostly learning on the job and only ever touching a fraction of the platform. While preparing for the Cloud Engineer certification, I realized how hard it is to truly remember dozens of services or understand when I would use them and how they fit together in real scenarios. So I built CloudTutor, an interactive learning simulator that explains the most widely used Google Cloud services and challenges you to design common architectures step by step.',
     techStack: ['JS', 'VueJs', 'VueFlow', 'Tailwind', 'DaisyUI', 'Firebase'],
@@ -33,7 +33,7 @@ export const projects = [
     year: 2024,
     url: 'https://upit.com',
     shortDescription: 'Building a conversational AI game-creation platform.',
-    description: 'I joined the UpIt founding team to help build a platform where anyone can create games directly in the browser using natural conversation. The system translates user intent into actual games, including code, logic, sound effects, music, and graphics, all powered by generative AI, agents and retrieval. Working closely with the founder and CTO of FRVR, I helped shape the early architecture, roadmap and real-time editor that makes game creation possible.',
+    description: 'I joined the UpIt (FRVR) founding team to help build a platform where anyone can create games directly in the browser using natural conversation. The system translates user intent into actual games, including code, logic, sound effects, music, and graphics, all powered by generative AI, agents and retrieval. Working closely with the founder and CTO of FRVR, I helped shape the early architecture, roadmap and real-time editor that makes game creation possible.',
     techStack: ['JS', 'SvelteKit', 'NodeJs', 'WebSockets', 'MongoDB', 'AI', 'RAG', 'Agents'],
     images: [
       '/assets/projects/upit.webp'
