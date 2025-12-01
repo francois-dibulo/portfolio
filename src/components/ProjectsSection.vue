@@ -1,14 +1,9 @@
 <template>
   <section
     ref="sectionRef"
-    class="relative py-32 flex flex-col w-full m-auto bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+    class="relative py-32 flex flex-col w-full m-auto bg-base-100 text-white overflow-hidden"
     aria-label="Projects"
   >
-    <!-- Animated background -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-    </div>
 
     <div class="relative z-10">
       <div ref="titleRef" class="text-center mb-20">

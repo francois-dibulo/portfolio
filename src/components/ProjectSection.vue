@@ -30,7 +30,7 @@
 
     <div class="relative z-10 max-w-7xl mx-auto">
       <!-- Project Header with fancy styling - NOW ABOVE IMAGE -->
-      <header ref="headerRef" class="mb-12">
+      <header ref="headerRef" class="mb-6">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
           <div class="space-y-3">
             <h2 
@@ -88,6 +88,12 @@
         </div>
       </header>
 
+      <div v-if="project.shortDescription" class="mb-6">
+        <p class="text-lg md:text-xl leading-relaxed space-y-4">
+          {{ project.shortDescription }}
+        </p>
+      </div>
+
       <!-- Hero Image with glassmorphism overlay - NOW BELOW TITLE -->
       <div v-if="heroImage" ref="imageRef" class="mb-12 relative group">
         <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
@@ -104,9 +110,9 @@
 
       <!-- Description with fade-in -->
       <div ref="descriptionRef" class="mb-10">
-        <div class="card bg-base-200 shadow-xl">
+        <div class="card bg-base-200/50 shadow-xl">
           <div class="card-body">
-            <div class="text-lg md:text-xl leading-relaxed space-y-4">
+            <div class="text-sm lg:text-lg md:text-xl leading-relaxed space-y-4">
               <p v-for="(paragraph, index) in descriptionParagraphs" :key="index" class="opacity-90">
                 {{ paragraph }}
               </p>

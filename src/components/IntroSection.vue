@@ -19,12 +19,12 @@
       <!-- Image with animation -->
       <div 
         ref="imageRef"
-        class="w-full md:w-2/4 flex flex-col justify-center items-center mb-10 md:mb-0"
+        class="w-full lg:w-[40%] flex flex-col justify-center items-center mb-10 lg:mb-0"
       >
         <div class="relative group">
           <div class="absolute -inset-4"></div>
           <img
-            class="relative max-w-[300px] md:max-w-[400px] lg:max-w-[500px] transform transition-transform duration-300 group-hover:scale-105"
+            class="relative max-w-[100%] md:max-w-[90%] lg:max-w-[100%] transform transition-transform duration-300 group-hover:scale-105"
             src="/assets/intro.webp"
             alt="François Weber"
             loading="eager"
@@ -33,14 +33,14 @@
       </div>
 
       <!-- Text content with staggered animations -->
-      <div class="w-full md:w-2/4 flex flex-col justify-center text-left space-y-6">
+      <div class="w-full lg:w-[60%] flex flex-col justify-center text-left space-y-6">
         <div ref="titleRef">
-          <h1 class="text-5xl font-nunito font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+          <h1 class="text-3xl lg:text-5xl font-nunito font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
             Hi, I am François!
           </h1>
         </div>
         
-        <div ref="textRef" class="space-y-4 text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
+        <div ref="textRef" class="space-y-4 text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
           <p class="opacity-90">
             I got my first computer with internet access at the age of 14, basically when the browser wars started and guestbooks were a thing.
             I was amazed about the possibilities — you could reach millions of people with just coding skills and an idea, right?!

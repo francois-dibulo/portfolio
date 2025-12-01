@@ -1,7 +1,7 @@
 <template>
   <section
     ref="sectionRef"
-    class="relative py-20 md:py-32 flex flex-col w-full m-auto bg-gradient-to-b from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 overflow-hidden"
+    class="relative py-20 md:py-32 flex flex-col w-full m-auto overflow-hidden bg-base-100"
     aria-label="Timeline"
   >
     <!-- Background decoration -->
@@ -65,7 +65,7 @@
           :ref="el => { if (el) timelineItemRefs[index] = el }"
           class="flex-shrink-0 w-80 md:w-96 snap-center"
         >
-          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
+          <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
             <div class="card-body">
               <div class="badge badge-primary badge-lg mb-2">
                 {{ item.time }}

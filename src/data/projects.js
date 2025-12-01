@@ -4,11 +4,12 @@ export const projects = [
     role: 'Founder',
     year: 2025,
     url: 'https://cloudtutor.app',
-    description: 'I spent over 10 years building architectures with Google Cloud, but as so often it was more a "learning while doing" and I only touched a slice of all the GCP services. I started to learn for a Cloud Engineer Certificate, but had trouble remember all the services and als to understand real live scenarios. That\'s why I built CloudTutor, which helps you to understand the most popular Google Cloud services and challenges you to build common architectures.',
+    shortDescription: 'A hands-on simulator for mastering Google Cloud architectures.',
+    description: 'I have spent over a decade building production systems on Google Cloud, mostly learning on the job and only ever touching a fraction of the platform. While preparing for the Cloud Engineer certification, I realized how hard it is to truly remember dozens of services or understand how they fit together in real scenarios. So I built CloudTutor, an interactive learning simulator that explains the most widely used Google Cloud services and challenges you to design common architectures step by step.',
     techStack: ['JS', 'VueJs', 'VueFlow', 'Tailwind', 'DaisyUI', 'Firebase'],
     images: [
+      '/assets/projects/cloudtutor-big.webp',
       '/assets/projects/cloudtutor.webp',
-      '/assets/projects/cloudtutor-big.webp'
     ],
     videos: [],
     visible: true
@@ -18,9 +19,12 @@ export const projects = [
     role: 'Founder',
     year: 2025,
     url: 'https://superfive.io',
-    description: 'On SuperFive you play a sequence of 5 random hypercasual games against other players. The first one to win all 5 games wins the match. The catch is, that you have either limited time or you need to reach a certain score. If you lose a game, you fall back to the previous one. Besides creating the platform, match making and so on, I created over 12 hypercasual games and the superfive.io NPM package, so that other devs can contribute creating games.',
+    shortDescription: 'A multiplayer hypercasual game tournament for the browser.',
+    description: 'SuperFive is a multiplayer challenge where players compete through a sequence of five random hypercasual games. Each game has time- or score-based objectives, and losing a round sends you back to the previous one - creating fast, tense matches. Beyond building the multiplayer platform, matchmaking engine and infrastructure, I created more than 12 hypercasual games and published the superfive.io NPM package, allowing external developers to build and contribute new games.',
     techStack: ['JS', 'VueJs', 'Firebase', 'Phaser', 'Cloud Run', 'Pub/Sub', 'NPM package', 'NodeJs'],
-    images: [],
+    images: [
+      '/assets/projects/superfive.webp',
+    ],
     videos: [],
     visible: true
   },
@@ -29,7 +33,8 @@ export const projects = [
     role: 'Early-Stage AI Engineer',
     year: 2024,
     url: 'https://upit.com',
-    description: 'I started in a small team with the founder and CTO of FRVR to build the UpIt platform, which let\'s anyone build games in the browser and in real-time through natural conversation and generative AI. The goal was to turn user input into games, including code and assets such as sounds effects, music and graphics.',
+    shortDescription: 'Building a conversational AI game-creation platform.',
+    description: 'I joined the UpIt founding team to help build a platform where anyone can create games directly in the browser using natural conversation. The system translates user intent into actual games, including code, logic, sound effects, music, and graphics, all powered by generative AI, agents and retrieval. Working closely with the founder and CTO of FRVR, I helped shape the early architecture, roadmap and real-time editor that makes game creation possible.',
     techStack: ['JS', 'SvelteKit', 'NodeJs', 'WebSockets', 'MongoDB', 'AI', 'RAG', 'Agents'],
     images: [
       '/assets/projects/upit.webp'
@@ -38,12 +43,13 @@ export const projects = [
     visible: true
   },
   {
-    name: 'Dibulo',
+    name: 'Dibulo.com',
     role: 'Founder',
     year: 2023,
     url: 'https://dibulo.com',
-    description: 'Dibulo is an interactive coloring session where kids bring their colored templates on paper, alive on a screen. Several worlds, like Sealand, Tran Express and Space (educational). It all started in Madeira, accelerator where I validated the idea and pitched it to many people for 6 weeks. It has been used by a wide range of kindergartens. Average session duration of 45 minutes. Coloring books, sold on Amazon, became best-seller on Amazon.nl.',
-    techStack: ['JavaScript', 'TypeScript', 'VueJs', 'Tailwind', 'DaisyUI', 'Firebase', 'NodeJS', 'Firestore', 'GCP', 'FastAPI', 'Python', 'Pydantic', 'OpenCV', 'Fly.io', 'Phaser', 'Trello', 'Mixpanel', 'Mailersend'],
+    shortDescription: 'An interactive coloring session for kids.',
+    description: 'Dibulo turns childrens hand-colored paper templates into animated characters inside themed worlds (Sealand, Train Express, Space, and more). I had the idea already for 10 years in my mind and then started the execution during an accelerator program in Madeira, where I validated the concept with dozens of experts and parents. Dibulo has since been used in numerous kindergartens, with session lengths averaging 45 minutes. I also published several companion coloring books on Amazon, including a best-seller on Amazon.nl. The product spans web, computer vision, real-time interactions, and a full backend ecosystem.',
+    techStack: ['JavaScript', 'TypeScript', 'VueJs', 'Tailwind', 'DaisyUI', 'Firebase', 'NodeJS', 'GCP', 'FastAPI', 'Python', 'OpenCV', 'Fly.io', 'Phaser', 'Trello', 'Mixpanel', 'Mailersend'],
     images: [
       '/assets/projects/dibulo.webp',
       '/assets/projects/dibulo-sealand.webp',
@@ -54,12 +60,13 @@ export const projects = [
     visible: true
   },
   {
-    name: 'AirConsole',
+    name: 'AirConsole.com',
     role: 'Founding Member',
     year: 2015,
     url: 'https://airconsole.com',
     state: 'Acquired by KPIT in 2025',
-    description: 'AirConsole is a real-time local multiplayer gaming platform which turns smartphones into gamepads. It was the first time I joined a startup from day 1. Besides engineering I took on many other roles, like helping the partnership team to bring AirConsole to OTT providers (TrueDigital, Swisscom, Telefonica, XLHome) and AndroidTV (Amazon, Xiaomi) and even Atari and Steam. Later I worked on the technical side of the PoC with BMW, to bring a gaming experience into cars. Reached 10M+ users and CHF 1M+ ARR and which was successfully acquired by KPIT Technologies',
+    shortDescription: 'A cross-device multiplayer gaming platform turning phones into controllers.',
+    description: 'AirConsole is a real-time local multiplayer gaming platform where smartphones act as gamepads. I joined on day one as the founding engineer and contributed far beyond engineering: helping bring AirConsole to major OTT providers (TrueDigital, Swisscom, Telefónica, XLHome), Android TV ecosystems (Amazon, Xiaomi), and even platforms like Atari and Steam. Later, I worked closely with the partnerships team on the technical PoC that brought gaming into BMW in-car entertainment systems. AirConsole grew to 10M+ users and CHF 1M+ ARR, and was successfully acquired by KPIT Technologies. During my time I created 10 HTML5 games, which have been played by millions  players.',
     techStack: ['JS', 'VueJs', 'Python', 'Google Cloud', 'WebSocket', 'Web-RTC'],
     images: [
       '/assets/projects/airconsole.webp',
