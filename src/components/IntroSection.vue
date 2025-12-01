@@ -22,9 +22,9 @@
         class="w-full md:w-2/4 flex flex-col justify-center items-center mb-10 md:mb-0"
       >
         <div class="relative group">
-          <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+          <div class="absolute -inset-4"></div>
           <img
-            class="relative max-w-[300px] md:max-w-[400px] lg:max-w-[500px] rounded-2xl shadow-2xl transform transition-transform duration-300 group-hover:scale-105"
+            class="relative max-w-[300px] md:max-w-[400px] lg:max-w-[500px] transform transition-transform duration-300 group-hover:scale-105"
             src="/assets/intro.webp"
             alt="François Weber"
             loading="eager"
@@ -35,7 +35,7 @@
       <!-- Text content with staggered animations -->
       <div class="w-full md:w-2/4 flex flex-col justify-center text-left space-y-6">
         <div ref="titleRef">
-          <h1 class="text-5xl xl:text-7xl font-nunito font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+          <h1 class="text-5xl font-nunito font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
             Hi, I am François!
           </h1>
         </div>
@@ -63,7 +63,7 @@
         <div ref="contactRef" class="flex flex-wrap items-center gap-4 pt-4">
           <a 
             href="mailto:hi@airfrancois.com" 
-            class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            class="btn btn-primary btn-lg"
           >
             Get in Touch
           </a>
@@ -71,7 +71,7 @@
             href="https://www.linkedin.com/in/fcweber/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-slate-200 dark:border-slate-700"
+            class="btn btn-outline btn-lg"
           >
             LinkedIn
           </a>

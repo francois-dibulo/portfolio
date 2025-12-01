@@ -48,14 +48,14 @@
 
       <div ref="buttonRef" class="mt-12 text-center">
         <a
-          class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-blue-400/30"
+          class="btn btn-primary btn-lg gap-2"
           href="https://www.youtube.com/channel/UCJvSxu2KCWQ4n7tzJFDgaQg"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit YouTube channel to see all videos"
         >
           See all videos
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 inline-block ml-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>

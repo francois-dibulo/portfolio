@@ -43,33 +43,29 @@
             >
               {{ project.name }}
             </h2>
-            <div class="flex flex-wrap items-center gap-4 text-lg md:text-xl text-slate-300">
-              <span 
+            <div class="flex flex-wrap items-center gap-4 text-lg md:text-xl">
+              <div 
                 :class="[
-                  'px-4 py-2 backdrop-blur-sm rounded-lg border',
-                  index % 2 === 0
-                    ? 'bg-slate-800/50 border-slate-700/50'
-                    : 'bg-slate-700/50 border-slate-600/50'
+                  'badge badge-lg',
+                  index % 2 === 0 ? 'badge-primary' : 'badge-secondary'
                 ]"
               >
                 {{ project.role }}
-              </span>
-              <span 
+              </div>
+              <div 
                 :class="[
-                  'px-4 py-2 backdrop-blur-sm rounded-lg border',
-                  index % 2 === 0
-                    ? 'bg-slate-800/50 border-slate-700/50'
-                    : 'bg-slate-700/50 border-slate-600/50'
+                  'badge badge-lg',
+                  index % 2 === 0 ? 'badge-outline badge-primary' : 'badge-outline badge-secondary'
                 ]"
               >
                 {{ project.year }}
-              </span>
-              <span 
+              </div>
+              <div 
                 v-if="project.state" 
-                class="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-lg border border-green-500/30 text-green-300"
+                class="badge badge-lg badge-success"
               >
                 {{ project.state }}
-              </span>
+              </div>
             </div>
           </div>
           <a
@@ -79,15 +75,13 @@
             rel="noopener noreferrer"
             ref="buttonRef"
             :class="[
-              'group/btn px-8 py-4 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 border',
-              index % 2 === 0
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 border-blue-400/30'
-                : 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400/30'
+              'btn btn-lg gap-2',
+              index % 2 === 0 ? 'btn-primary' : 'btn-secondary'
             ]"
             :aria-label="`Visit ${project.name} website`"
           >
-            <span>Visit Project</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform">
+            Visit Project
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
@@ -109,10 +103,16 @@
       </div>
 
       <!-- Description with fade-in -->
-      <div ref="descriptionRef" class="mb-10 text-lg md:text-xl leading-relaxed text-slate-300 space-y-4">
-        <p v-for="(paragraph, index) in descriptionParagraphs" :key="index" class="opacity-90">
-          {{ paragraph }}
-        </p>
+      <div ref="descriptionRef" class="mb-10">
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <div class="text-lg md:text-xl leading-relaxed space-y-4">
+              <p v-for="(paragraph, index) in descriptionParagraphs" :key="index" class="opacity-90">
+                {{ paragraph }}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Tech Stack with animated badges -->
@@ -129,13 +129,16 @@
           Tech Stack
         </h3>
         <div class="flex flex-wrap gap-3">
-          <span
-            v-for="(tech, index) in project.techStack"
-            :key="index"
-            class="px-4 py-2 bg-slate-800/60 backdrop-blur-sm text-slate-200 rounded-lg border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 hover:scale-105 font-medium shadow-lg"
+          <div
+            v-for="(tech, techIndex) in project.techStack"
+            :key="techIndex"
+            :class="[
+              'badge badge-lg',
+              index % 2 === 0 ? 'badge-outline badge-primary' : 'badge-outline badge-secondary'
+            ]"
           >
             {{ tech }}
-          </span>
+          </div>
         </div>
       </div>
 
@@ -155,32 +158,35 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Images -->
           <div
-            v-for="(image, index) in project.images"
-            :key="`img-${index}`"
-            class="group relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+            v-for="(image, imgIndex) in project.images"
+            :key="`img-${imgIndex}`"
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-            <img
-              :src="image"
-              :alt="`${project.name} - Screenshot ${index + 1} showing project features or interface`"
-              class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
-            >
+            <figure class="overflow-hidden rounded-lg">
+              <img
+                :src="image"
+                :alt="`${project.name} - Screenshot ${imgIndex + 1} showing project features or interface`"
+                class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              >
+            </figure>
           </div>
           <!-- Videos -->
           <div
-            v-for="(video, index) in project.videos"
-            :key="`vid-${index}`"
-            class="relative overflow-hidden rounded-xl shadow-xl aspect-video bg-slate-800"
+            v-for="(video, vidIndex) in project.videos"
+            :key="`vid-${vidIndex}`"
+            class="card bg-base-200 shadow-xl aspect-video"
           >
-            <video
-              :src="video"
-              controls
-              class="w-full h-full object-cover"
-              :aria-label="`${project.name} - Video ${index + 1}`"
-            >
-              Your browser does not support the video tag.
-            </video>
+            <div class="card-body p-0">
+              <video
+                :src="video"
+                controls
+                class="w-full h-full object-cover rounded-lg"
+                :aria-label="`${project.name} - Video ${vidIndex + 1}`"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>

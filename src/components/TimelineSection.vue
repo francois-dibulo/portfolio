@@ -24,7 +24,7 @@
         @click="scrollLeft"
         @keydown.enter="scrollLeft"
         @keydown.space.prevent="scrollLeft"
-        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 btn btn-circle btn-sm lg:btn-md bg-white shadow-lg hover:bg-gray-100"
+        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 btn btn-circle btn-primary btn-sm lg:btn-md shadow-lg"
         aria-label="Scroll timeline left"
         type="button"
       >
@@ -39,7 +39,7 @@
         @click="scrollRight"
         @keydown.enter="scrollRight"
         @keydown.space.prevent="scrollRight"
-        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 btn btn-circle btn-sm lg:btn-md bg-white shadow-lg hover:bg-gray-100"
+        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 btn btn-circle btn-primary btn-sm lg:btn-md shadow-lg"
         aria-label="Scroll timeline right"
         type="button"
       >
@@ -65,26 +65,23 @@
           :ref="el => { if (el) timelineItemRefs[index] = el }"
           class="flex-shrink-0 w-80 md:w-96 snap-center"
         >
-          <div class="group relative h-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-indigo-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:via-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500"></div>
-            <div class="relative p-6 space-y-4">
-              <time class="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-mono font-bold rounded-full">
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
+            <div class="card-body">
+              <div class="badge badge-primary badge-lg mb-2">
                 {{ item.time }}
-              </time>
-              <h3 class="text-xl md:text-2xl font-black text-slate-800 dark:text-white">
+              </div>
+              <h3 class="card-title text-xl md:text-2xl">
                 {{ item.title }}
               </h3>
-              <div v-if="item.image" class="overflow-hidden rounded-xl">
+              <figure v-if="item.image" class="mt-2">
                 <img
                   :src="item.image"
                   :alt="item.imageAlt || item.title"
-                  class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  class="rounded-xl w-full"
                   loading="lazy"
                 >
-              </div>
-              <div class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                <p v-html="item.description"></p>
-              </div>
+              </figure>
+              <div class="text-base leading-relaxed" v-html="item.description"></div>
             </div>
           </div>
         </article>
