@@ -147,55 +147,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Media Gallery with fancy grid -->
-      <div v-if="hasMedia" ref="galleryRef" class="mt-16">
-        <h3 class="text-2xl font-bold mb-8 text-white flex items-center gap-3">
-          <span 
-            :class="[
-              'w-1 h-8 rounded-full',
-              index % 2 === 0
-                ? 'bg-gradient-to-b from-purple-500 to-pink-500'
-                : 'bg-gradient-to-b from-cyan-500 to-blue-500'
-            ]"
-          ></span>
-          Gallery
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Images -->
-          <div
-            v-for="(image, imgIndex) in project.images"
-            :key="`img-${imgIndex}`"
-            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300"
-          >
-            <figure class="overflow-hidden rounded-lg">
-              <img
-                :src="image"
-                :alt="`${project.name} - Screenshot ${imgIndex + 1} showing project features or interface`"
-                class="w-full h-auto object-cover hover:scale-110 transition-transform duration-500"
-                loading="lazy"
-              >
-            </figure>
-          </div>
-          <!-- Videos -->
-          <div
-            v-for="(video, vidIndex) in project.videos"
-            :key="`vid-${vidIndex}`"
-            class="card bg-base-200 shadow-xl aspect-video"
-          >
-            <div class="card-body p-0">
-              <video
-                :src="video"
-                controls
-                class="w-full h-full object-cover rounded-lg"
-                :aria-label="`${project.name} - Video ${vidIndex + 1}`"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </article>
 </template>
