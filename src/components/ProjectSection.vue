@@ -1,10 +1,100 @@
 <template>
   <article
     ref="articleRef"
-    class="relative w-full px-4 md:px-8 lg:px-16"
+    :class="[
+      'relative w-full px-4 md:px-8 lg:px-16 py-20 md:py-32',
+      index % 2 === 0 
+        ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900' 
+        : 'bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800'
+    ]"
   >
-    <div class="max-w-7xl mx-auto">
-      <!-- Hero Image with glassmorphism overlay -->
+    <!-- Background decoration based on index -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div 
+        v-if="index % 2 === 0"
+        class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+      ></div>
+      <div 
+        v-if="index % 2 === 0"
+        class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+      ></div>
+      <div 
+        v-if="index % 2 === 1"
+        class="absolute top-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+      ></div>
+      <div 
+        v-if="index % 2 === 1"
+        class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+      ></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Project Header with fancy styling - NOW ABOVE IMAGE -->
+      <header ref="headerRef" class="mb-12">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+          <div class="space-y-3">
+            <h2 
+              :class="[
+                'text-4xl md:text-5xl lg:text-6xl font-nunito font-extrabold bg-clip-text text-transparent',
+                index % 2 === 0 
+                  ? 'bg-gradient-to-r from-white via-blue-200 to-indigo-200' 
+                  : 'bg-gradient-to-r from-white via-purple-200 to-pink-200'
+              ]"
+            >
+              {{ project.name }}
+            </h2>
+            <div class="flex flex-wrap items-center gap-4 text-lg md:text-xl text-slate-300">
+              <span 
+                :class="[
+                  'px-4 py-2 backdrop-blur-sm rounded-lg border',
+                  index % 2 === 0
+                    ? 'bg-slate-800/50 border-slate-700/50'
+                    : 'bg-slate-700/50 border-slate-600/50'
+                ]"
+              >
+                {{ project.role }}
+              </span>
+              <span 
+                :class="[
+                  'px-4 py-2 backdrop-blur-sm rounded-lg border',
+                  index % 2 === 0
+                    ? 'bg-slate-800/50 border-slate-700/50'
+                    : 'bg-slate-700/50 border-slate-600/50'
+                ]"
+              >
+                {{ project.year }}
+              </span>
+              <span 
+                v-if="project.state" 
+                class="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-lg border border-green-500/30 text-green-300"
+              >
+                {{ project.state }}
+              </span>
+            </div>
+          </div>
+          <a
+            v-if="project.url"
+            :href="project.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            ref="buttonRef"
+            :class="[
+              'group/btn px-8 py-4 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 border',
+              index % 2 === 0
+                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 border-blue-400/30'
+                : 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400/30'
+            ]"
+            :aria-label="`Visit ${project.name} website`"
+          >
+            <span>Visit Project</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero Image with glassmorphism overlay - NOW BELOW TITLE -->
       <div v-if="heroImage" ref="imageRef" class="mb-12 relative group">
         <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
         <div class="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -18,42 +108,6 @@
         </div>
       </div>
 
-      <!-- Project Header with fancy styling -->
-      <header ref="headerRef" class="mb-8">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
-          <div class="space-y-3">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-nunito font-extrabold bg-gradient-to-r from-white via-blue-200 to-indigo-200 bg-clip-text text-transparent">
-              {{ project.name }}
-            </h2>
-            <div class="flex flex-wrap items-center gap-4 text-lg md:text-xl text-slate-300">
-              <span class="px-4 py-2 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50">
-                {{ project.role }}
-              </span>
-              <span class="px-4 py-2 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700/50">
-                {{ project.year }}
-              </span>
-              <span v-if="project.state" class="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-lg border border-green-500/30 text-green-300">
-                {{ project.state }}
-              </span>
-            </div>
-          </div>
-          <a
-            v-if="project.url"
-            :href="project.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            ref="buttonRef"
-            class="group/btn px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 border border-blue-400/30"
-            :aria-label="`Visit ${project.name} website`"
-          >
-            <span>Visit Project</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-        </div>
-      </header>
-
       <!-- Description with fade-in -->
       <div ref="descriptionRef" class="mb-10 text-lg md:text-xl leading-relaxed text-slate-300 space-y-4">
         <p v-for="(paragraph, index) in descriptionParagraphs" :key="index" class="opacity-90">
@@ -64,7 +118,14 @@
       <!-- Tech Stack with animated badges -->
       <div v-if="project.techStack && project.techStack.length > 0" ref="techRef" class="mb-12">
         <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-          <span class="w-1 h-8 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full"></span>
+          <span 
+            :class="[
+              'w-1 h-8 rounded-full',
+              index % 2 === 0
+                ? 'bg-gradient-to-b from-blue-500 to-indigo-500'
+                : 'bg-gradient-to-b from-purple-500 to-pink-500'
+            ]"
+          ></span>
           Tech Stack
         </h3>
         <div class="flex flex-wrap gap-3">
@@ -81,7 +142,14 @@
       <!-- Media Gallery with fancy grid -->
       <div v-if="hasMedia" ref="galleryRef" class="mt-16">
         <h3 class="text-2xl font-bold mb-8 text-white flex items-center gap-3">
-          <span class="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
+          <span 
+            :class="[
+              'w-1 h-8 rounded-full',
+              index % 2 === 0
+                ? 'bg-gradient-to-b from-purple-500 to-pink-500'
+                : 'bg-gradient-to-b from-cyan-500 to-blue-500'
+            ]"
+          ></span>
           Gallery
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -299,5 +367,17 @@ onMounted(() => {
 <style scoped>
 article {
   scroll-margin-top: 4rem;
+}
+
+/* Add subtle border between sections */
+article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 </style>

@@ -18,7 +18,7 @@
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full"></div>
       </div>
 
-      <div class="w-full space-y-32">
+      <div class="w-full">
         <ProjectSection
           v-for="(project, index) in visibleProjects"
           :key="project.name"
