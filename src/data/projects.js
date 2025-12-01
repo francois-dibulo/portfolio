@@ -8,7 +8,6 @@ export const projects = [
     description: 'I have spent over a decade building production systems on Google Cloud, mostly learning on the job and only ever touching a fraction of the platform. While preparing for the Cloud Engineer certification, I realized how hard it is to truly remember dozens of services or understand when I would use them and how they fit together in real scenarios. So I built CloudTutor, an interactive learning simulator that explains the most widely used Google Cloud services and challenges you to design common architectures step by step.',
     techStack: ['JS', 'VueJs', 'VueFlow', 'Tailwind', 'DaisyUI', 'Firebase'],
     images: [
-      '/assets/projects/cloudtutor-big.webp',
       '/assets/projects/cloudtutor.webp',
     ],
     videos: [],
@@ -52,9 +51,6 @@ export const projects = [
     techStack: ['JavaScript', 'TypeScript', 'VueJs', 'Tailwind', 'DaisyUI', 'Firebase', 'NodeJS', 'Google Cloud', 'FastAPI', 'Python', 'OpenCV', 'Fly.io', 'Phaser'],
     images: [
       '/assets/projects/dibulo.webp',
-      '/assets/projects/dibulo-sealand.webp',
-      '/assets/projects/dibulo-express.webp',
-      '/assets/projects/dibulo-frutball.webp'
     ],
     videos: [],
     visible: true
@@ -70,10 +66,6 @@ export const projects = [
     techStack: ['HTML5', 'JavaScript', 'VueJs', 'AngularJs', 'NodeJs', 'Python', 'Google Cloud', 'WebSocket', 'Web-RTC', 'Phaser', 'PixiJs'],
     images: [
       '/assets/projects/airconsole.webp',
-      '/assets/projects/airconsole-friendsquiz.webp',
-      '/assets/projects/airconsole-pinworld.webp',
-      '/assets/projects/airconsole-hanginthere.webp',
-      '/assets/projects/airconsole-tictacboom.webp'
     ],
     videos: [],
     visible: true

@@ -100,7 +100,7 @@
         <div class="relative overflow-hidden rounded-2xl shadow-2xl">
           <img
             :src="heroImage"
-            :alt="`${project.name} - Hero screenshot showing the main interface or key feature`"
+            :alt="`${project.name} screenshot`"
             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
           >
