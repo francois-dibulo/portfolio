@@ -195,12 +195,17 @@ const hasMedia = computed(() => {
 const setupAnimation = (element, options) => {
   if (!element) return
   
+  // Apply initial state immediately to prevent flash
+  useMotion(element, {
+    initial: options.initial
+  })
+  
+  // Use observer to trigger enter animation when element comes into view
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           useMotion(element, {
-            initial: options.initial,
             enter: options.enter
           })
           observer.disconnect()

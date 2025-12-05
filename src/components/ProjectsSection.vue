@@ -41,13 +41,20 @@ const titleRef = ref(null)
 
 onMounted(() => {
   if (titleRef.value) {
+    // Apply initial state immediately
     useMotion(titleRef.value, {
-      initial: { opacity: 0, y: 30 },
-      enter: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { duration: 800, ease: [0.16, 1, 0.3, 1] }
-      }
+      initial: { opacity: 0, y: 30 }
+    })
+    
+    // Trigger enter animation after a brief delay to ensure initial state is applied
+    requestAnimationFrame(() => {
+      useMotion(titleRef.value, {
+        enter: { 
+          opacity: 1, 
+          y: 0, 
+          transition: { duration: 800, ease: [0.16, 1, 0.3, 1] }
+        }
+      })
     })
   }
 })
