@@ -201,6 +201,7 @@ const setupAnimation = (element, options) => {
   })
   
   // Use observer to trigger enter animation when element comes into view
+  // rootMargin triggers animation earlier (200px before element enters viewport)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -212,7 +213,7 @@ const setupAnimation = (element, options) => {
         }
       })
     },
-    { threshold: 0.1 }
+    { threshold: 0.01, rootMargin: '200px 0px' }
   )
   
   observer.observe(element)
@@ -226,8 +227,8 @@ onMounted(() => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 800,
-        delay: props.index * 150,
+        duration: 600,
+        delay: props.index * 50,
         ease: [0.16, 1, 0.3, 1]
       }
     }
@@ -242,8 +243,8 @@ onMounted(() => {
         scale: 1,
         y: 0,
         transition: {
-          duration: 900,
-          delay: props.index * 150 + 200,
+          duration: 600,
+          delay: props.index * 50 + 50,
           ease: [0.16, 1, 0.3, 1]
         }
       }
@@ -258,8 +259,8 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         transition: {
-          duration: 700,
-          delay: props.index * 150 + 300,
+          duration: 500,
+          delay: props.index * 50 + 100,
           ease: [0.16, 1, 0.3, 1]
         }
       }
@@ -274,8 +275,8 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         transition: {
-          duration: 700,
-          delay: props.index * 150 + 400,
+          duration: 500,
+          delay: props.index * 50 + 150,
           ease: [0.16, 1, 0.3, 1]
         }
       }
@@ -290,8 +291,8 @@ onMounted(() => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 700,
-          delay: props.index * 150 + 500,
+          duration: 500,
+          delay: props.index * 50 + 200,
           ease: [0.16, 1, 0.3, 1]
         }
       }
@@ -306,8 +307,8 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         transition: {
-          duration: 800,
-          delay: props.index * 150 + 600,
+          duration: 600,
+          delay: props.index * 50 + 250,
           ease: [0.16, 1, 0.3, 1]
         }
       }
@@ -322,8 +323,8 @@ onMounted(() => {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 600,
-          delay: props.index * 150 + 350,
+          duration: 400,
+          delay: props.index * 50 + 75,
           ease: [0.16, 1, 0.3, 1]
         }
       }

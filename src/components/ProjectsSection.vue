@@ -52,7 +52,7 @@ onMounted(() => {
         enter: { 
           opacity: 1, 
           y: 0, 
-          transition: { duration: 800, ease: [0.16, 1, 0.3, 1] }
+          transition: { duration: 400, ease: [0.16, 1, 0.3, 1] }
         }
       })
     })
