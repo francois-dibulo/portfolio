@@ -103,39 +103,39 @@ const canScrollRight = ref(true)
 
 const timelineItems = [
   {
-    time: '1985',
+    time: 'Life',
     title: 'Born in Germany 🇩🇪',
     image: '/assets/timeline/born2.webp',
     imageAlt: 'Born in Germany',
-    description: 'I was born in Germany and somewhat always fascinated by computers from a young age. Mostly I played with my dad\'s Apple - battled my sister in games like PacMan or Corvette.'
+    description: 'I was born in Germany and somewhat always fascinated by computers from a young age. Mostly I played with my dad\'s computer - battled my sister in games like PacMan or Corvette.'
   },
   {
     time: '2009',
     title: 'Bachelor in Salzburg 🇦🇹',
     image: '/assets/timeline/fh.webp',
     imageAlt: 'Salzburg',
-    description: 'I taught myself how to code and at the age of 15, I helped small companies to build websites.<br />Looking back, I am amazed how far I got as I didn\'t know much about "real programming". I believe I always had a "get it done" approach.<br />I moved to Salzburg, Austria to study and learn how to do it properly.'
+    description: 'I taught myself how to code, and at the age of 15, I build websites for companies.<br />Looking back, I am amazed how far I got as I didn\'t know much about "real programming". I believe I always had a "get it done" approach.<br />I moved to Salzburg, Austria to study and learn how to do it properly.'
   },
   {
     time: '2012+',
     title: 'Startup life',
     image: '/assets/timeline/startup1.webp',
     imageAlt: 'Startup life',
-    description: 'So far I have mostly worked for early-stage startups and have been part of the journey of many companies. It fits me as I am a curious person and love to learn new things when wearing many hats.'
+    description: 'So far I have mostly worked with early-stage startups and have been part of many company journeys. It suits me well, as I am naturally curious person and enjoy learning new things while wearing many hats.'
   },
   {
     time: '2015',
     title: 'AirConsole - Zurich 🇨🇭',
     image: '/assets/timeline/airconsole.webp',
     imageAlt: 'AirConsole',
-    description: 'I joined AirConsole as founding member and helped to build the company from the ground up. I also showcased my game Tic Tac Boom at Gamescom that year, which has been played by over 10M players.'
+    description: 'I joined AirConsole as a founding member, helping build the company from the ground up. That year, I showcased my game Tic Tac Boom at Gamescom, later played by over 10 million players.I joined AirConsole as founding member and helped to build the company from the ground up. I also showcased my game Tic Tac Boom at Gamescom that year, which has been played by over 10M players.'
   },
   {
     time: 'Hobbies',
     title: 'Traveling the world 🌍',
     image: '/assets/timeline/madeira.webp',
     imageAlt: 'Traveling the world',
-    description: 'If you ask me what I spend my money on, it\'s mostly traveling. I love to explore new places, get surprised and go out of my comfort zone.'
+    description: 'If you ask me what I spend my money on, it’s mostly travel. I love exploring new places, getting surprised, and pushing myself out of my comfort zone.',
   },
   {
     time: 'Life',
