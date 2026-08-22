@@ -43,7 +43,7 @@
         <div ref="textRef" class="space-y-4 text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
           <p class="opacity-90">
             I got my first computer with internet access at the age of 14, basically when the browser wars started and guestbooks were a thing.
-            I was amazed about the possibilities — you could reach millions of people with just coding skills and an idea, right?!
+            I was amazed about the possibilities: reaching millions of people with just coding skills and an idea, right?!
           </p>
           <p class="opacity-90">
             Fast forward a few startups later and I learned it's not just the idea. Execution, timing and product–market fit matter just as much.
