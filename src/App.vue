@@ -1,9 +1,10 @@
 <template>
   <main>
     <IntroSection />
-    <TimelineSection />
     <ProjectsSection />
-    <VideoSection />
+    <!-- <TimelineSection />
+    
+    <VideoSection /> -->
   </main>
 </template>
 
