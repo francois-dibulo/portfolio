@@ -84,5 +84,19 @@ export const projects = [
     videos: [],
     visible: true
   },
+  {
+    name: 'Invaders Retreat',
+    role: 'Founder',
+    year: 2024,
+    url: 'https://invadersretreat.com/',
+    shortDescription: '2-Finger, fast paced action game',
+    description: 'Invaders Retreat started as an experiment in building a different kind of mobile action game. Your phone screen becomes the battlefield: using two fingers, you control weapons that cut across the screen to stop incoming invaders while letting your own units safely reach the base. As you survive longer, you unlock new weapons, face more enemy types, build combos, and generally create more chaos. What I enjoy most about this project is that, two years later, I still find myself playing and updating it. It has become a bit of a "wouldn\'t it be cool if..." project: new enemy types, weapons, mechanics, and whatever else seems fun to add. Somewhere along the way, I even created an entire backstory for the game and used generative video AI to turn it into a cinematic story video. It may never be finished and that\'s probably the point',
+    techStack: ['JavaScript', 'CapacitorJS', 'Firebase', 'Phaser4', 'VueJS'],
+    images: [
+      '/assets/projects/invaders-retreat.webp',
+    ],
+    videos: [],
+    visible: true
+  },
 ]
 
