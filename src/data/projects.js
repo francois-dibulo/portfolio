@@ -70,5 +70,19 @@ export const projects = [
     videos: [],
     visible: true
   },
+  {
+    name: 'Future Headlines',
+    role: 'Founder',
+    year: 2026,
+    url: 'https://the-future-times-6cdc6.web.app/',
+    shortDescription: 'A workshop tool to align teams on a shared company vision.',
+    description: 'Running team alignment workshops around vision and roadmaps, I kept looking for a warmup that was fun but still revealed something real. Future Headlines is that exercise turned into a product: everyone joins on their phone, writes the newspaper stories they imagine for the company years from now, ranks the best ones, and prints them as a shared front page. Beyond the energy it creates in the room, it surfaces how teammates see the future, what they believe success looks like, and where their focus actually is',
+    techStack: ['JavaScript', 'VueJs', 'Tailwind', 'DaisyUI', 'Firebase'],
+    images: [
+      '/assets/projects/future-headlines.webp',
+    ],
+    videos: [],
+    visible: true
+  },
 ]
 
